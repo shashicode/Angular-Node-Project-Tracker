@@ -50,3 +50,9 @@ module.exports.addProject = function (project, callback) {
     Project.create(project, callback);
 
 }
+
+// Remove project
+module.exports.removeProject = function (id, callback) {
+    var query = {_id: id};
+    Project.remove(query, callback);
+}
