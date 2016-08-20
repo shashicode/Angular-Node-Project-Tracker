@@ -56,3 +56,17 @@ module.exports.removeProject = function (id, callback) {
     var query = {_id: id};
     Project.remove(query, callback);
 }
+
+// Update project
+module.exports.updateProject = function (id, project, options, callback) {
+    var query = {_id: id};
+    var update = {
+        name: project.name,
+        description: project.description,
+        status: project.status,
+        amount: project.amount,
+        payment: project.payment,
+        clientname: project.clientname
+    }
+    Project.findOneAndUpdate(query, update, options, callback);
+}

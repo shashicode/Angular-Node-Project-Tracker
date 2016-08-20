@@ -57,6 +57,19 @@ app.delete('/api/projectlist/:_id', function (req, res) {
 
 });
 
+// Updated Project
+app.put('/api/projectlist/:_id', function (req, res) {
+    var id = req.params._id;
+    var project = req.body;
+    Projects.updateProject(id, project, {}, function(err, project){
+        if(err){
+            throw err;
+        }
+        res.json(project);
+    });
+
+});
+
 
 // Setting port
 app.listen(3000);
