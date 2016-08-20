@@ -4,6 +4,8 @@ var express = require('express');
 // Creating express app Object
 var app = express();
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
 // Importing mongoose
 var mongoose = require('mongoose');
 
@@ -27,6 +29,18 @@ app.get('/api/projectlist', function (req, res) {
             throw err;
         }
         res.json(projects);
+    });
+
+});
+
+// Add Project
+app.post('/api/projectlist', function (req, res) {
+    var project = req.body;
+    Projects.addProject(project, function(err, project){
+        if(err){
+            throw err;
+        }
+        res.json(project);
     });
 
 });

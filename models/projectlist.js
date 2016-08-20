@@ -43,3 +43,10 @@ module.exports.getProjects = function (callback, limit) {
     Project.find(callback).limit(limit);
 
 }
+
+// Add projects
+module.exports.addProject = function (project, callback) {
+
+    Project.create(project, callback);
+
+}
