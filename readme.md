@@ -7,10 +7,10 @@ Technologies used.
   - ExpressJS
   - HTML/CSS
 
-![Project Tracker Screenshot](showcase1.jpg "Project Tracker Screenshot 1")
+![Project Tracker Screenshot1](showcase1.JPG)
 
-![Project Tracker Screenshot](showcase2.jpg "Project Tracker Screenshot 2")
+![Project Tracker Screenshot2](showcase2.JPG)
 
 ### Sample database Schema
 
-![Project Tracker Screenshot](showcase3.jpg "Project Tracker Screenshot 3")
+![Project Tracker Screenshot3](showcase3.JPG)
