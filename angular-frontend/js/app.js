@@ -24,4 +24,14 @@ myApp.controller('mainController', ['$scope', '$http', '$log', function ($scope,
         });
 
 
+    $scope.deleteProject = function (id) {
+        $http.delete('/api/projectlist/' + id)
+            .success(function (result) {
+                window.location.href= "#/";
+            })
+            .error(function (data, status) {
+                $log.info('Error deleting data');
+            });
+    }
+
 }]);
