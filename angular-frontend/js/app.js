@@ -7,6 +7,10 @@ myApp.config(function ($routeProvider) {
             templateUrl: 'pages/home.html',
             controller: 'mainController'
         })
+        .when('/addproject', {
+            templateUrl: 'pages/addproject.html',
+            controller: 'mainController'
+        })
         .otherwise({
             redirectTo: '/'
         });
@@ -31,6 +35,16 @@ myApp.controller('mainController', ['$scope', '$http', '$log', function ($scope,
             })
             .error(function (data, status) {
                 $log.info('Error deleting data');
+            });
+    }
+    
+    $scope.addProject = function () {
+        $http.post('/api/projectlist/', $scope.projectinfo)
+            .success(function (result) {
+                window.location.href = '#/';
+            })
+            .error(function () {
+               $log.info('Error adding the project');
             });
     }
 

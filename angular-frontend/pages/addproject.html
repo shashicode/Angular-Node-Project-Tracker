@@ -1,0 +1,23 @@
+<div class="col-sm-12" ng-controller="mainController">
+    <form ng-submit="addProject()">
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="projectinfo.name" placeholder="Name">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="projectinfo.description" placeholder="Description">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="projectinfo.status" placeholder="Status">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="projectinfo.amount" placeholder="Amount">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="projectinfo.payment" placeholder="Payment">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="projectinfo.clientname" placeholder="Clientname">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>

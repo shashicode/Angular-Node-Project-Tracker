@@ -7,6 +7,7 @@
             <th>Amount</th>
             <th>Payment</th>
             <th>Client Name</th>
+            <th>     </th>
         </tr>
         <tr ng-repeat="projectlist in projectlists">
             <td>{{projectlist.name}}</td>
@@ -14,7 +15,8 @@
             <td>{{projectlist.status}}</td>
             <td>{{projectlist.amount}}</td>
             <td>{{projectlist.payment}}</td>
-            <td>{{projectlist.clientname}}<a href="#" ng-click="deleteProject(projectlist._id)"><span class="glyphicon glyphicon-trash
+            <td>{{projectlist.clientname}}</td>
+            <td><a href="#" ng-click="deleteProject(projectlist._id)"><span class="glyphicon glyphicon-trash
 "></span></a></td>
         </tr>
     </table>
