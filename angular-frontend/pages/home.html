@@ -1,0 +1,20 @@
+<div class="table-responsive" ng-controller="mainController">
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Amount</th>
+            <th>Payment</th>
+            <th>Client Name</th>
+        </tr>
+        <tr ng-repeat="projectlist in projectlists">
+            <td>{{projectlist.name}}</td>
+            <td>{{projectlist.description}}</td>
+            <td>{{projectlist.status}}</td>
+            <td>{{projectlist.amount}}</td>
+            <td>{{projectlist.payment}}</td>
+            <td>{{projectlist.clientname}}</td>
+        </tr>
+    </table>
+</div>
