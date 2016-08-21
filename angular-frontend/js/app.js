@@ -19,7 +19,7 @@ myApp.config(function ($routeProvider) {
 
 myApp.controller('mainController', ['$scope', '$http', '$log', function ($scope, $http, $log) {
 
-    $http.get('http://localhost:3000/api/projectlist')
+    $http.get('/api/projectlist')
         .success(function (result) {
             $scope.projectlists= result;
         })
@@ -47,5 +47,6 @@ myApp.controller('mainController', ['$scope', '$http', '$log', function ($scope,
                $log.info('Error adding the project');
             });
     }
+
 
 }]);
